@@ -1,59 +1,63 @@
-.List {
+.Form {
     display: flex;
     flex-direction: column;
-    list-style: none;
-    gap: 25px;
-  }
+    border: 1px solid #303086;
+    border-radius: 5px;
+    height: fit-content;
+    width: 300px;
+    padding: 15px;
+    margin: 25px 0;
+}
 
-  .Item{
-    display: flex;
-    flex-direction: row;
-    white-space: pre;
-  }
-
-  
-  .Name {
-    margin-right: 10px;
-    font-size: 16px;
-    font-weight: 500;
-    color: #232366;
-    letter-spacing: 0.05em;
-  }
-  
-  .Number {
-    margin-left: auto;
-    font-size: 16px;
+.Label {
+    font-size: 18px;
     font-weight: 500;
     color: #303086;
     letter-spacing: 0.05em;
-  }
-  
-  .Button {
-    margin-left: 15px;
-    display: inline-block;
+    line-height: 1.5em;
+}
+
+.Input {
+    display: block;
+    width: 200px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #303086;
+    letter-spacing: 0.05em;
+    line-height: 1.5em;
+    border: 1px solid #303086;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.Button {
+    width: 120px;
     color: #232366;
     background-color: #c6cefa;
-    padding: 2px 10px;
+    padding: 5px 10px;
     max-width: fit-content;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 500;
     text-transform: capitalize;
     letter-spacing: 0.05em;
     border-style: none;
     box-shadow: 1px 1px 1px #303086, 2px 2px 2px #303086, 2px 2px 2px #303086;
     border-radius: 5px;
-  }
-  
-  .Button:hover {
+    display: inline-block;
+}
+
+.Button:hover {
     cursor: pointer;
-    transform: scale(115%); 
+    transform: scale(115%);
     background-color: #303086;
     color: #c6cefa;
     box-shadow: 1px 1px 1px #c6cefa, 2px 2px 2px #c6cefa, 2px 2px 2px #c6cefa;
-  }
-  
-  .Button:active {
+}
+
+.Button:active {
     background-color: #303086;
     color: #c6cefa;
     box-shadow: 1px 1px 1px #c6cefa, 2px 2px 2px #c6cefa, 2px 2px 2px #c6cefa;
-  }
+}

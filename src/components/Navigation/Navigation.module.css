@@ -1,0 +1,21 @@
+.Container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.Link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px;
+    font-weight: 700;
+    color: #2a363b;
+}
+
+.Active {
+    text-decoration: none;
+    padding: 12px;
+    color: #387aecbd;
+    text-shadow: 1px 1px 1px rgb(7, 19, 84);
+}

@@ -1,35 +1,35 @@
 import { nanoid } from '@reduxjs/toolkit';
 import css from './Filter.module.css';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { handleFilter } from 'redux/FilterSlice';
+import PropTypes from 'prop-types';
 
 const Filter = () => {
-  const [filter, setFilter] = useState('');
   const dispatch = useDispatch();
   const filterId = nanoid();
 
-  useEffect(() => { 
-    dispatch(handleFilter(filter));
-    // eslint-disable-next-line
-  }, [filter]);
-
   const handleChange = event => {
-    setFilter(event.currentTarget.value);
+    dispatch(handleFilter(event.currentTarget.value));
   };
 
-    return (
-      <label className={css.label}>
-            Find contacts by Name
-            <input className={css.input}
+  return (
+      <div className={css.Container}>
+          <label className={css.Label}>
+              Find contacts by Name
+              <input className={css.Input}
                 type="text"
                 name="filter"
                 id={filterId}
-                filter={filter}
                 onChange={handleChange}
-            />
-        </label>
+              />
+          </label>
+      </div>
     );
 };
 
 export default Filter;
+
+Filter.propTypes = {
+  onChange: PropTypes.func,
+};

@@ -25,11 +25,11 @@ export const ContactForm = () => {
     let isContact;
     let isNumber;
    
-    contacts.forEach(contact => { 
-      if (newContact.name.toLowerCase() === contact.name.toLowerCase()) {
+    contacts.forEach(contact => {
+      if (contact.name.toLowerCase() === newContact.name.toLowerCase()) {
         isContact = true;
       }
-      if (newContact.number.toLowerCase() === contact.number.toLowerCase()) {
+      if (contact.number.toLowerCase() === newContact.number.toLowerCase()) {
         isNumber = true;
        }
     });
@@ -52,15 +52,21 @@ export const ContactForm = () => {
       form.reset();
     } else {
       dispatch(addContact(newContact));
+      Notiflix.Notify.success(`${newContact.name} was added to your contacts.`, {
+        position: 'center-top',
+        closeButton: true,
+        timeout: 500,
+        width: '350px',
+      });
       form.reset();
     }
   };
 
     return (
-        <form className={css.form} htmlFor={elementID} onSubmit={handleSubmit}>
-            <label className={css.label}>
+        <form className={css.Form} htmlFor={elementID} onSubmit={handleSubmit}>
+            <label className={css.Label}>
                 Name
-                <input className={css.input} id={elementID}
+                <input className={css.Input} id={elementID}
                   type="text"
                   name="name"
                   pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -68,9 +74,9 @@ export const ContactForm = () => {
                   required
                 />
             </label>
-            <label className={css.label}>
+            <label className={css.Label}>
                 Number
-          <input className={css.input}
+                <input className={css.Input}
                   type="tel"
                   name="number"
                   pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -78,7 +84,7 @@ export const ContactForm = () => {
                   required
                 />
             </label>
-            <button className={css.button} type="submit">
+            <button className={css.Button} type="submit">
                 Add contact
             </button>
         </form>
@@ -87,7 +93,7 @@ export const ContactForm = () => {
 
 ContactForm.propTypes = {
   contacts: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
-  addNewContact: PropTypes.func,
+  addContact: PropTypes.func,
 };
 
 export default ContactForm;

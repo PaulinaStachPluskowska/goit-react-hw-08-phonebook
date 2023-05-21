@@ -1,4 +1,4 @@
-.form {
+.Form {
     display: flex;
     flex-direction: column;
     border: 1px solid #303086;
@@ -9,7 +9,7 @@
     margin: 25px 0;
   }
   
-  .label {
+  .Label {
     font-size: 18px;
     font-weight: 500;
     color: #303086;
@@ -17,7 +17,7 @@
     line-height: 1.5em;
   }
   
-  .input {
+  .Input {
     display: block;
     width: 200px;
     margin-bottom: 30px;
@@ -32,7 +32,7 @@
     padding-left: 10px;
   }
   
-  .button {
+  .Button {
     width: 120px;
     color: #232366;
     background-color: #c6cefa;
@@ -48,7 +48,7 @@
     display: inline-block;
   }
   
-  .button:hover {
+  .Button:hover {
     cursor: pointer;
     transform: scale(115%); 
     background-color: #303086;
@@ -56,7 +56,7 @@
     box-shadow: 1px 1px 1px #c6cefa, 2px 2px 2px #c6cefa, 2px 2px 2px #c6cefa;
   }
   
-  .button:active {
+  .Button:active {
     background-color: #303086;
     color: #c6cefa;
     box-shadow: 1px 1px 1px #c6cefa, 2px 2px 2px #c6cefa, 2px 2px 2px #c6cefa;

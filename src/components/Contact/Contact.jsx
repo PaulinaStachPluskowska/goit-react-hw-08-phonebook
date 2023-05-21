@@ -1,6 +1,6 @@
 import React from 'react';
 import css from './Contact.module.css';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/Operators';
 
@@ -13,17 +13,17 @@ const Contact = ({ contact }) => {
 
 
   return (
-    <>
-      <p className={css.name}>
+    <li>
+      <p className={css.Name}>
         {contact.name}:
       </p>
-      <p className={css.number}>
+      <p className={css.Number}>
         {contact.number}  
       </p>
-      <button className={css.button} type="button" onClick={handleDelete}>
+      <button className={css.Button} type="button" onClick={handleDelete}>
         Delete
       </button>
-    </>
+    </li>
   );
 };
 
@@ -31,6 +31,7 @@ const Contact = ({ contact }) => {
 export default Contact;
 
 Contact.propTypes = {
-  contact: propTypes.object,
+  contact: PropTypes.objectOf(PropTypes.string),
+  deleteContact: PropTypes.func,
 };
 

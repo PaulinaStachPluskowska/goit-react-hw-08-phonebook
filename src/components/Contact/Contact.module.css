@@ -1,4 +1,4 @@
-.name {
+.Name {
   margin-right: 10px;
   font-size: 16px;
   font-weight: 500;
@@ -6,7 +6,7 @@
   letter-spacing: 0.05em;
 }
 
-.number {
+.Number {
   margin-left: auto;
   font-size: 16px;
   font-weight: 500;
@@ -14,7 +14,7 @@
   letter-spacing: 0.05em;
 }
 
-.button {
+.Button {
   margin-left: 15px;
   display: inline-block;
   color: #232366;
@@ -30,7 +30,7 @@
   border-radius: 5px;
 }
 
-.button:hover {
+.Button:hover {
   cursor: pointer;
   transform: scale(115%); 
   background-color: #303086;
@@ -38,7 +38,7 @@
   box-shadow: 1px 1px 1px #c6cefa, 2px 2px 2px #c6cefa, 2px 2px 2px #c6cefa;
 }
 
-.button:active {
+.Button:active {
   background-color: #303086;
   color: #c6cefa;
   box-shadow: 1px 1px 1px #c6cefa, 2px 2px 2px #c6cefa, 2px 2px 2px #c6cefa;
