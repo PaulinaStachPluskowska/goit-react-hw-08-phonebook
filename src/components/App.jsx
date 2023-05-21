@@ -38,7 +38,7 @@ const App = () => {
           <Route path='/contacts'
             element={<PrivateRoute redirectTo='/login' component={<ContactsPage />}
             />} />
-          <Route path="*" element={<p>There's nothing here: 404!</p>} />
+          {/* <Route path="*" element={<p>There's nothing here: 404!</p>} /> */}
         </Route>
       </Routes>
     );

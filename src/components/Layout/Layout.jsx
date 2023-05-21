@@ -5,7 +5,7 @@ import { Toaster } from 'react-hot-toast';
 import { AppBar } from 'components/AppBar/AppBar';
 import css from './Layout.module.css';
 
-export const Layout = ({ children }) => {
+export const Layout = () => {
   return (
     <div className={css.Container}>
       <AppBar />
