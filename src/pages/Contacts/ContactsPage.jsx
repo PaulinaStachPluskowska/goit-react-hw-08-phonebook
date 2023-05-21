@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { selectError, selectIsLoading } from "redux/Selectors";
 import { fetchContacts } from "redux/Operators";
 import css from './ContactsPage.module.css';
-import { HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 
 const ContactsPage = () => { 
@@ -21,9 +21,9 @@ useEffect(() => {
 
   return (
     <>
-    <HelmetProvider className={css.Container}>
+    <Helmet className={css.Container}>
       <h1 className={css.Header}>Phonebook</h1>
-      </HelmetProvider>
+      </Helmet>
       <ContactForm />
       <h2 className={css.SecondHeader}>Contacts</h2>
       <Filter />
