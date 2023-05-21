@@ -21,8 +21,8 @@ useEffect(() => {
 
   return (
     <>
-    <Helmet className={css.Container}>
-      <h1 className={css.Header}>Phonebook</h1>
+      <Helmet className={css.Container}>
+        <h1 className={css.Header}>Phonebook</h1>
       </Helmet>
       <ContactForm />
       <h2 className={css.SecondHeader}>Contacts</h2>
