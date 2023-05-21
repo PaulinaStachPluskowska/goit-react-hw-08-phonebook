@@ -1,3 +1,9 @@
+.Wrapper{
+  display: flex;
+  flex-direction: row;
+  max-width: 350px;
+  }
+
 .Name {
   margin-right: 10px;
   font-size: 16px;

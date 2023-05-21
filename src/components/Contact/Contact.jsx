@@ -13,7 +13,7 @@ const Contact = ({ contact }) => {
 
 
   return (
-    <li>
+    <li className={ css.Wrapper}>
       <p className={css.Name}>
         {contact.name}:
       </p>
